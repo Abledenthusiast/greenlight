@@ -1,0 +1,18 @@
+micronaut:
+  server:
+    max-request-size: '100MB'
+    multipart:
+      max-file-size: '100MB'
+
+greenlight:
+  db:
+    mongo:
+      host: "enthusiast-greenlight.mongo.cosmos.azure.com"
+      port: 10255
+      username: "enthusiast-greenlight"
+      password: ""
+    rogan:
+      client-id: "f87c89050e5b8231740e1d1c5bca9d214010c4c359bab9699aa9d18ad3d645f8"
+      client-secret: "eGfcZOh5MtN1T827jMJ5sdDOU6g_JRBb"
+      public-key: "f87c89050e5b8231740e1d1c5bca9d214010c4c359bab9699aa9d18ad3d645f8"
+      bot-token: "ODE0NzE1MDUxMjE4OTYwMzg1.YDh4hA.sYZGPXkLHIG5c0SNlFqDxTkarJY"

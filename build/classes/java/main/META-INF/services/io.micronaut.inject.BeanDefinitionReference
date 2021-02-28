@@ -1,0 +1,7 @@
+greenlight.rogan.$DiscordClientFactoryDefinitionClass
+greenlight.rogan.$MessageResponseMapperDefinitionClass
+greenlight.dataconnectors.$MongoConfigDefinitionClass
+greenlight.rogan.$RoganConfigDefinitionClass
+greenlight.$GreenlightControllerDefinitionClass
+greenlight.dataconnectors.$MongoConnectorFactoryDefinitionClass
+greenlight.rogan.$RoganConnectorDefinitionClass
