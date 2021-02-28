@@ -1,0 +1,14 @@
+micronaut:
+  server:
+    max-request-size: '100MB'
+    multipart:
+      max-file-size: '100MB'
+
+greenlight:
+  db:
+    mongo:
+      host: "enthusiast-greenlight.mongo.cosmos.azure.com"
+      port: 10255
+      username: "enthusiast-greenlight"
+      password: ""
+    rogan:
