@@ -12,3 +12,4 @@ greenlight:
       username: "enthusiast-greenlight"
       password: ""
     rogan:
+      bot-token: ""
