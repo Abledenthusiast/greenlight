@@ -10,6 +10,6 @@ greenlight:
       host: "enthusiast-greenlight.mongo.cosmos.azure.com"
       port: 10255
       username: "enthusiast-greenlight"
-      password: ""
+      password: "${mongo.password}"
     rogan:
-      bot-token: ""
+      bot-token: "${rogan.token}"
