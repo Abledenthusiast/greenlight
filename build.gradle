@@ -8,6 +8,8 @@ repositories {
     jcenter()
 }
 
+version = "0.1"    
+group = "com.abledenthusiast"
 micronaut {
     runtime("netty")
     testRuntime("junit5")
@@ -54,9 +56,6 @@ jar {
 
 shadowJar {
     archiveFileName="app.jar"
-    version = "0.1"
-    group = "com.abledenthusiast"
-    configurations = [project.configurations.compile]
     mergeServiceFiles()
 }
 

@@ -30,4 +30,4 @@ jobs:
         app-name: 'greenlights'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_65e28b85ea7b4ffca1468d6a1bdf19aa }}
-        package: '${{ github.workspace }}/build/libs/app.jar'
+        package: '${{ github.workspace }}/build/libs/*.jar'
