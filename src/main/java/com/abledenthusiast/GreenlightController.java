@@ -20,7 +20,7 @@ import java.nio.file.Path;
 
 
 @Context
-@Controller("/greenlight")
+@Controller("/api/v1/greenlight")
 public class GreenlightController {
 
     private static final Logger log = LoggerFactory.getLogger(GreenlightController.class);
@@ -40,7 +40,7 @@ public class GreenlightController {
         roganConnector.start();
     }
 
-    @Get
+    @Get("/status")
     public String status() {
         return "OK";
     }
