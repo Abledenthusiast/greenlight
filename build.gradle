@@ -59,6 +59,12 @@ java {
 //     }
 // }
 
+jar {
+   manifest {
+       attributes 'Class-Path': '/build/libs/app.jar'
+   }
+}
+
 shadowJar {
     archiveFileName="app.jar"
     mergeServiceFiles()
