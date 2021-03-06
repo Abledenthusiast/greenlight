@@ -36,11 +36,6 @@ dependencies {
     testImplementation("org.testcontainers:postgresql")
 }
 
-shadowJar {
-    archiveFileName="app.jar"
-    mergeServiceFiles()
-}
-
 
 application {
     mainClass.set("com.abledenthusiast.GreenlightApplication")
@@ -49,4 +44,9 @@ application {
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
     targetCompatibility = JavaVersion.toVersion("11")
+}
+
+shadowJar {
+    archiveFileName="app.jar"
+    mergeServiceFiles()
 }
