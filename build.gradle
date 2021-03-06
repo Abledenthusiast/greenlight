@@ -43,6 +43,14 @@ java {
     targetCompatibility = JavaVersion.toVersion("11")
 }
 
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'gradle.com.abledenthusiast.GreenlightApplication'
+    )
+  }
+}
 
 shadowJar {
     archiveFileName="app.jar"
