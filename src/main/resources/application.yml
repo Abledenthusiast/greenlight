@@ -7,9 +7,9 @@ micronaut:
 greenlight:
   db:
     mongo:
-      host: "enthusiast-greenlight.mongo.cosmos.azure.com"
+      host: enthusiast-greenlight.mongo.cosmos.azure.com
       port: 10255
-      username: "enthusiast-greenlight"
-      password: "${MONGO_PASSWORD}"
+      username: enthusiast-greenlight
+      password: ${MONGO_PASSWORD:password}
     rogan:
-      bot-token: "${ROGAN_TOKEN}"
+      bot-token: ${ROGAN_TOKEN:iamnotasecret}

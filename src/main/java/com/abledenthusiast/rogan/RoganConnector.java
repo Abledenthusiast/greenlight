@@ -9,6 +9,9 @@ import io.micronaut.context.annotation.Context;
 import io.micronaut.context.annotation.Prototype;
 import io.micronaut.scheduling.annotation.Scheduled;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 import javax.inject.Singleton;
 
 @Context
@@ -16,13 +19,19 @@ public class RoganConnector {
 
     private DiscordClientFactory clientFactory;
     private MessageResponseMapper messageResponseMapper;
+    private Executor executor;
 
     public RoganConnector(DiscordClientFactory clientFactory, MessageResponseMapper messageResponseMapper) {
         this.clientFactory = clientFactory;
         this.messageResponseMapper = messageResponseMapper;
+        this.executor = Executors.newSingleThreadExecutor();
     }
 
     public void start() {
+        executor.execute(this::listenToChannels);
+    }
+
+    private void listenToChannels() {
         final GatewayDiscordClient gateway = connect();
 
         gateway.on(MessageCreateEvent.class).subscribe(event -> {

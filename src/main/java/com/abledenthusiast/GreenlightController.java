@@ -36,7 +36,7 @@ public class GreenlightController {
     }
 
     @PostConstruct
-    private void startClients() {
+    public void startClients() {
         roganConnector.start();
     }
 
