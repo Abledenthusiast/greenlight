@@ -22,7 +22,7 @@ jobs:
         java-version: '11'
 
     - name: Build with Gradle
-      run: sh ./gradlew
+      run: sh ./gradlew assemble
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
