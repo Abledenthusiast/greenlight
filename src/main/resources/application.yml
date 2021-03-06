@@ -3,6 +3,7 @@ micronaut:
     max-request-size: '100MB'
     multipart:
       max-file-size: '100MB'
+    port: 80
 
 greenlight:
   db:
@@ -10,6 +11,6 @@ greenlight:
       host: "enthusiast-greenlight.mongo.cosmos.azure.com"
       port: 10255
       username: "enthusiast-greenlight"
-      password: "${mongo.password}"
+      password: "${MONGO_PASSWORD}"
     rogan:
-      bot-token: "${rogan.token}"
+      bot-token: "${ROGAN_TOKEN}"
