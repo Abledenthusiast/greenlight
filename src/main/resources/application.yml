@@ -3,7 +3,7 @@ micronaut:
     max-request-size: '100MB'
     multipart:
       max-file-size: '100MB'
-    port: 8080
+    port: 80
 
 greenlight:
   db:
