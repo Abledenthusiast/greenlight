@@ -36,6 +36,11 @@ dependencies {
     testImplementation("org.testcontainers:postgresql")
 }
 
+shadowJar {
+    archiveFileName="app.jar"
+    mergeServiceFiles()
+}
+
 
 application {
     mainClass.set("com.abledenthusiast.GreenlightApplication")
