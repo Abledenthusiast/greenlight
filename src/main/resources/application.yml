@@ -1,6 +1,5 @@
 micronaut:
   server:
-    port: 8080
     max-request-size: '100MB'
     multipart:
       max-file-size: '100MB'
