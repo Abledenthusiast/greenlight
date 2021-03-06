@@ -46,22 +46,21 @@ java {
     targetCompatibility = JavaVersion.toVersion("11")
 }
 
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'Gradle Quickstart',
-                   'Implementation-Version': version,
-                   'Main-Class': 'com.abledenthusiast.GreenlightApplication'
-    }
+// jar {
+//     manifest {
+//         attributes 'Implementation-Title': 'Gradle Quickstart',
+//                    'Implementation-Version': version,
+//                    'Main-Class': 'com.abledenthusiast.GreenlightApplication'
+//     }
 
-    from {
-    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
+//     from {
+//     configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//     configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+//     }
+// }
 
 shadowJar {
     archiveFileName="app.jar"
     mergeServiceFiles()
 }
 
-mainClassName = 'com.abledenthusiast.GreenlightApplication'
