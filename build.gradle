@@ -66,5 +66,5 @@ shadowJar {
 //                    'Implementation-Version': version,
 //                    'Main-Class': 'com.abledenthusiast.GreenlightApplication.Main'
 //     }
-}
+// }
 
