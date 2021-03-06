@@ -53,10 +53,19 @@ jar {
     )
   }
 }
+// Using Shadow with Application Plugin
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+mainClassName = 'myapp.Main'
 
 shadowJar {
     archiveFileName="app.jar"
     mergeServiceFiles()
+}
+
+tasks.withType(JavaExec) {
+    classpath += configurations.developmentOnly
 }
 
 // jar {
